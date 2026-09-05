@@ -1,10 +1,10 @@
-# 🔐 FVBS Carteira Offline — Air-Gapped Wallet
+# 🦟 MURIÇOCA WALLET — Air-Gapped Wallet
 
-**Carteira digital 100% offline** para o Protocolo FVBS (Fundamento de Verificação Baseado em Soberania).
+**Carteira digital 100% offline** para transferências seguras via QR Code.
 
 ## Como usar
 
-1. Acesse via **GitHub Pages**: `https://SEU-USUARIO.github.io/fvbs-carteira-offline/`
+1. Acesse via **GitHub Pages**: `https://fa5itu.github.io/fvbs-carteira-offline/`
 2. Ou baixe o `carteira-offline.html` e abra direto no navegador (sem internet)
 3. Nunca conecte este dispositivo à internet enquanto operar
 
@@ -24,13 +24,12 @@
 - Nonces de 128 bits previnem replay
 - Backup com AES-256-GCM + 250k iterações PBKDF2
 
-## Protocolo
+## Fluxo
 
 ```
-FVBS_SOVEREIGN:{tipo}:{valor}:{nonce}:{timestamp}
-  → SHA-256 → tx_hash
-  → ECDSA P-256 sign → assinatura
-  → QR Code → transferência offline
+Gerar chave → Criar recibo offline → Assinar ECDSA
+  → QR Code / JSON → Transferência peer-to-peer
+  → Contra-assinatura do destinatário → Ledger duplo
 ```
 
 ## Licença
@@ -38,4 +37,4 @@ FVBS_SOVEREIGN:{tipo}:{valor}:{nonce}:{timestamp}
 MIT — Livre para uso e modificação.
 
 ---
-**Protocolo FVBS v2.0** — Observatório IECC
+**MURIÇOCA WALLET v1.0** — Observatório IECC

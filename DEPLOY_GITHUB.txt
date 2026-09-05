@@ -1,0 +1,45 @@
+═══════════════════════════════════════════════════════════════════
+  DEPLOY: FVBS Carteira Offline → GitHub Pages
+═══════════════════════════════════════════════════════════════════
+
+PASSO 1 — Criar repositório no GitHub
+──────────────────────────────────────
+  1. Acesse: https://github.com/new
+  2. Nome: fvbs-carteira-offline
+  3. Descrição: "Air-gapped wallet — FVBS Sovereign Protocol"
+  4. Público ✅ (para GitHub Pages funcionar)
+  5. NÃO marque "Add a README" (já temos)
+  6. Clique "Create repository"
+
+PASSO 2 — Push do código
+──────────────────────────────────────
+  cd /tmp/fvbs-carteira-offline
+
+  # Adicionar o remote (substitua SEU-USUARIO)
+  git remote add origin https://github.com/SEU-USUARIO/fvbs-carteira-offline.git
+
+  # Push para main
+  git push -u origin main
+
+PASSO 3 — Ativar GitHub Pages
+──────────────────────────────────────
+  1. Vá em: https://github.com/SEU-USUARIO/fvbs-carteira-offline/settings/pages
+  2. Source: "Deploy from a branch"
+  3. Branch: main / (root)
+  4. Clique "Save"
+
+PASSO 4 — Acessar
+──────────────────────────────────────
+  URL: https://SEU-USUARIO.github.io/fvbs-carteira-offline/
+
+  ✅ Funciona 100% offline (arquivo único, sem CDN)
+  ✅ Funciona direto no navegador (sem servidor)
+  ✅ PWA-ready (manifest.json opcional)
+
+ARQUIVOS:
+──────────────────────────────────────
+  carteira-offline.html  (271KB — arquivo único standalone)
+  README.md             (1.3KB — documentação)
+  .gitignore            (14B)
+
+═══════════════════════════════════════════════════════════════════
